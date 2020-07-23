@@ -1,46 +1,16 @@
 <resources>
-    <string name="thumbor_encription_key">d41d8cd98f00asdfab204e9800998ecf8427e</string>
-    <bool name="samsung_gesture_enabled">true</bool>
+    <string name="sdfs">d41d8cd98f00asdfab204e9800998ecf8427e</string>
+    <bool name="dfsd">true</bool>
 
-    <!-- Live Config-->
-    <string name="app_name_label">ZALORA</string>
-    <string name="default_gtm_container_id">GTM-5LXPNW</string>
-    <string name="default_country_host">api.staging.sg.zalora.net</string>
-    <string name="default_country_api_path">v1</string>
-    <string name="default_country_currency">SGD</string>
-    <string name="default_url_scheme">https</string>
-    <string name="default_mobile_api_path">mobile-api</string>
-    <string name="default_country_iso_code" />
-    <string name="default_lang" />
-    <string name="default_country_shop_name" />
-    <string name="default_country_name" />
-    <string name="default_country_ident" />
-    <string name="adx_app_name">com.zalora.android</string>
-    <bool name="show_app_infos_splash">true</bool>
-    <bool name="enable_developer_panel">false</bool>
-    <bool name="live_mode">true</bool>
-    <string name="facebook_app_name">Zalora</string>
-    <string name="facebook_app_id">631302916886534</string>
-    <!--<string name="facebook_app_id">393074817547005</string>-->
-
-    <!-- Criteo Account Ids -->
-    <string name="criteo_hk">8430</string>
-    <string name="criteo_id">11908</string>
-    <string name="criteo_my">5837</string>
-    <string name="criteo_ph">8431</string>
-    <string name="criteo_sg">5143</string>
-    <string name="criteo_vn">5839</string>
-    <!-- account id for Thai is yet to be requested -->
-    <string name="criteo_th">12727</string>
 
     <bool name="test_mode">false</bool>
     <bool name="cache_request_enable">false</bool>
 
     <!-- Apptimize -->
-    <string name="apptimize_token">DLCi8KeXsnhEsdfccB2uPnY8sdfDTduBazq3Y</string>
+    <string name="apptimize_token">124dsfdAF41241AS1515f</string>
     <!-- HockeyApp -->
-    <string name="hockeyapp_token">14019861d7e950asdf59ac045b3928b801a0</string>
+    <string name="hockeyapp_token">oiupoASfpipidfopi124618102810</string>
     <!-- Newrelic -->
-    <string name="newrelic_key">AAe529871e442fd44ad791080516431d7sdfsdf35e6686d27</string>
+    <string name="newrelic_key">HSUFAHSIUYCd7491274LFCAdgdsdgdgdgasdg</string>
 
 </resources>

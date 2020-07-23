@@ -1,27 +1,16 @@
-import sys, os, re, itertools, json
+import sys, os, re, itertools, json, getopt
 
 ignored = ['.git', 'node_modules', 'bower_components', '.sass-cache', '.png', '.ico', '.mov', '.jpeg', 'jpg', '.avi', '.gif']
 ruleFile = "./pattern.json"
 api_key_min_entropy_ratio = 0.5
 api_key_min_length = 7
-with open(ruleFile) as f:
-  rule = json.load(f)
 
-def pairwise(iterable):
-    "s -> (s0,s1), (s1,s2), (s2, s3), ..."
-    a, b = itertools.tee(iterable)
-    next(b, None)
-    return itertools.izip(a, b)
-
-def token_is_api_key(token):
-	if len(token) < api_key_min_length:
-		return (False, '')
-	entropy = 0
-	for a, b in pairwise(list(token)):
-		if not ((str.islower(a) and str.islower(b)) or (str.isupper(a) and\
-			str.isupper(b)) or (str.isdigit(a) and str.isdigit(b))):
-			entropy += 1
-	return (float(entropy) / len(token) > api_key_min_entropy_ratio, float(entropy) / len(token))
+def help():
+	print("Usage: "+sys.argv[0]+" [OPTIONS]\n")
+	print("\t-r --rule /path/to/rules\t\timport regexes from json file")
+	print("\t-p --path /path/to/source_code/\t\tPath to scan")
+	print("Example:")
+	print("\tpython3 %s --rule pattern.json --path test/"%(sys.argv[0]))
 
 def detect(line):
 	for (k,v) in rule.items():
@@ -45,9 +34,10 @@ def scanFile(pathToFile):
 	for line in f:
 		result = detect(line)
 		if result[0]:
-			print("\n\n")
+			print("~~~~~~~~~~~~~~~~~~~~~")
 			# print('\033[1m' + path_to_file + ' : Line ' + str(number) + ' : Entropy ' + str(result[1]) + '\033[0m')
-			print("Path: " + pathToFile + ' : Line ' + str(number) + "\nReason: "+ str(result[0]) + "\n" + str(result[1]))
+			print("Filepath: " + pathToFile + ' : Line ' + str(number) + "\nReason: "+ str(result[0]) + "\n\n" + str(result[1]))
+			print("~~~~~~~~~~~~~~~~~~~~~\n\n")
 			# print(line)
 		number += 1
 
@@ -66,12 +56,22 @@ def scanDir(path):
 				scanFile(fullpath)
 
 if __name__ == "__main__":
-	if len(sys.argv) == 1:
-		print('Please specify path.')
+	if len(sys.argv) < 2:
+		help()
 		sys.exit(0)
+	try:
+		opts,args = getopt.getopt(sys.argv[1:],'r:p:',['rule=','path='])
+	except Exception as e:
+		print(e)
+		help()
+		sys.exit(0)
+	for o,a in opts:
+		if o in ('-r','--rule'):ruleFile = a
+		if o in ('-p','--path'):path = a
 
-	path = str(sys.argv[1])
-	print('Scanning directory: ' + path)
-	print('Ignoring: ' + str(ignored))
+	with open(ruleFile) as f:
+  		rule = json.load(f)
+	# print('Scanning directory: ' + path)
+	# print('Ignoring: ' + str(ignored))
 
 	scanDir(path)
