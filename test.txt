@@ -1,0 +1,16 @@
+<resources>
+    <string name="sdfs">d41d8cd98f00asdfab204e9800998ecf8427e</string>
+    <bool name="dfsd">true</bool>
+
+
+    <bool name="test_mode">false</bool>
+    <bool name="cache_request_enable">false</bool>
+
+    <!-- Apptimize -->
+    <string name="apptimize_token">124dsfdAF41241AS1515f</string>
+    <!-- HockeyApp -->
+    <string name="hockeyapp_token">oiupoASfpipidfopi124618102810</string>
+    <!-- Newrelic -->
+    <string name="newrelic_key">HSUFAHSIUYCd7491274LFCAdgdsdgdgdgasdg</string>
+
+</resources>
