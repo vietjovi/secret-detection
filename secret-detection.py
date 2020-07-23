@@ -1,6 +1,6 @@
 import sys, os, re, itertools, json, getopt
 
-ignored = ['.git', 'node_modules', 'bower_components', '.sass-cache', '.png', '.ico', '.mov', '.jpeg', 'jpg', '.avi', '.gif']
+ignored = ['.git', 'node_modules', 'bower_components', '.sass-cache', '.png', '.ico', '.mov', '.jpeg', 'jpg', '.avi', '.gif', '.apk', '.exe', '.jar', '.dmg', '.pdf', '.ipa', '.svg']
 ruleFile = "./pattern.json"
 api_key_min_entropy_ratio = 0.5
 api_key_min_length = 7
@@ -31,15 +31,18 @@ def detect(line):
 def scanFile(pathToFile):
 	f = open(pathToFile)
 	number = 1
-	for line in f:
-		result = detect(line)
-		if result[0]:
-			print("~~~~~~~~~~~~~~~~~~~~~")
-			# print('\033[1m' + path_to_file + ' : Line ' + str(number) + ' : Entropy ' + str(result[1]) + '\033[0m')
-			print("Filepath: " + pathToFile + ' : Line ' + str(number) + "\nReason: "+ str(result[0]) + "\n\n" + str(result[1]))
-			print("~~~~~~~~~~~~~~~~~~~~~\n\n")
-			# print(line)
-		number += 1
+	try:
+		for line in f:
+			result = detect(line)
+			if result[0]:
+				print("~~~~~~~~~~~~~~~~~~~~~")
+				# print('\033[1m' + path_to_file + ' : Line ' + str(number) + ' : Entropy ' + str(result[1]) + '\033[0m')
+				print("Filepath: " + pathToFile + ' : Line ' + str(number) + "\nReason: "+ str(result[0]) + "\n\n" + str(result[1]))
+				print("~~~~~~~~~~~~~~~~~~~~~\n\n")
+				# print(line)
+			number += 1
+	except:
+		pass
 
 def scanDir(path):
 	for dirpath, _, filenames in os.walk(path):
@@ -65,6 +68,7 @@ if __name__ == "__main__":
 		print(e)
 		help()
 		sys.exit(0)
+		print(opts)
 	for o,a in opts:
 		if o in ('-r','--rule'):ruleFile = a
 		if o in ('-p','--path'):path = a
