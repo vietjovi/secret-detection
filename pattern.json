@@ -34,6 +34,10 @@
     "Twitter OAuth": "[t|][w|W][i|I][t|T][t|T][e|E][r|R].*['|\"][0-9a-zA-Z]{35,44}['|\"]",
     "API KEY": "(?i)(<.*\".*key\">[0-9A-Za-z]+?</.*>)",
     "THUMBOR API KEY": "(?i)(<.*\"thumbor.*key\">.+?</.*>)",
-    "FreshDesk API" : "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
-    "Sendgrid API" : "SG\\.[0-9A-Za-z\\-\\.\\_]{66}"
+    "API KEY 2" : "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
+    "Sendgrid API" : "SG\\.[0-9A-Za-z\\-\\.\\_]{66}",
+    "Google Drive URL": "https://drive.google.com/\\S+",
+    "Google Spreadsheets URL": "https://docs.google.com/spreadsheets/\\S+",
+    "Google Document URL": "https://docs.google.com/document/\\S+",
+    "Google Slide URL": "https://docs.google.com/presentation/\\S+"
 }
