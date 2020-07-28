@@ -6,7 +6,7 @@ Finding your secret(Credential, API Key, AWS Key, Token, etc.)  in your source c
 ```python3 secret-detection.py --rule /path/to/pattern.json --path /path/to/scan```  
 ```Ex: python3 secret-detection.py --rule pattern.json --path test/```  
 
-### The ignored list: add patterns for filenames that you want to ignore. Default: ```ignored = ['.git', 'node_modules', 'bower_components', '.sass-cache', '.png', '.ico', '.mov', '.jpeg', 'jpg', '.avi', '.gif', '.apk', '.exe', '.jar', '.dmg', '.pdf', '.ipa', '.svg']```
+* The ignored list: add patterns for filenames that you want to ignore. Default: ```ignored = ['.git', 'node_modules', 'bower_components', '.sass-cache', '.png', '.ico', '.mov', '.jpeg', 'jpg', '.avi', '.gif', '.apk', '.exe', '.jar', '.dmg', '.pdf', '.ipa', '.svg']```
 
 ## OUTPUT
 ```Filepath: test/test.txt : Line 14
