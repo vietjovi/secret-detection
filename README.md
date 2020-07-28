@@ -2,7 +2,7 @@
 Finding your secret(Credential, API Key, AWS Key, Token, etc.)  in your source code, files
 ## Welcome to join in and feel free to contribute.
 
-# USAGE:  
+## USAGE:  
 ```python3 secret-detection.py --rule /path/to/pattern.json --path /path/to/scan```  
 ```Ex: python3 secret-detection.py --rule pattern.json --path test/```  
 
@@ -35,11 +35,11 @@ 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
 
 ### You also can integrate the tool into CI/CD pipeline  
 
-# Wish List:  
+## Wish List:  
 1. Json Ouput  
 2. Entropy  
 3. Integrate to Git 
 4. ...
 
-# License
+## License
 ### This project is licensed under the terms of the MIT license.
