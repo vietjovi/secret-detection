@@ -29,18 +29,21 @@ def detect(line):
 	return (False, '')
 
 def scanFile(pathToFile):
-	f = open(pathToFile)
-	number = 1
 	try:
-		for line in f:
-			result = detect(line)
-			if result[0]:
-				print("~~~~~~~~~~~~~~~~~~~~~")
-				# print('\033[1m' + path_to_file + ' : Line ' + str(number) + ' : Entropy ' + str(result[1]) + '\033[0m')
-				print("Filepath: " + pathToFile + ' : Line ' + str(number) + "\nReason: "+ str(result[0]) + "\n\n" + str(result[1]))
-				print("~~~~~~~~~~~~~~~~~~~~~\n\n")
-				# print(line)
-			number += 1
+		f = open(pathToFile)
+		number = 1
+		try:
+			for line in f:
+				result = detect(line)
+				if result[0]:
+					print("~~~~~~~~~~~~~~~~~~~~~")
+					# print('\033[1m' + path_to_file + ' : Line ' + str(number) + ' : Entropy ' + str(result[1]) + '\033[0m')
+					print("Filepath: " + pathToFile + ' : Line ' + str(number) + "\nReason: "+ str(result[0]) + "\n\n" + str(result[1]))
+					print("~~~~~~~~~~~~~~~~~~~~~\n\n")
+					# print(line)
+				number += 1
+		except:
+			pass
 	except:
 		pass
 
