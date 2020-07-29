@@ -8,7 +8,7 @@ secret-detection is a static code analysis tool designed for parsing various com
     * OAuth Client Secrets
     * SSH Private Keys
     * ...
- * Supports a whitelisted
+ * Supports whitelisting files
  * Supports custom rules
  * Lightweight
  * Easy to customize to your needs 
