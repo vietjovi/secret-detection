@@ -1,5 +1,6 @@
 # secret-detection
 secret-detection is a static code analysis tool designed for parsing various common data formats in search of hardcoded credentials and sensitive information. secret-detection can run in the CLI or you can integrate it in your CI/CD pipeline.
+### Welcome to join in and feel free to contribute.
 
 ## Feature
 * Using regex rules to scan, and help identify the following types of secrets:
@@ -12,8 +13,6 @@ secret-detection is a static code analysis tool designed for parsing various com
  * Supports custom rules
  * Lightweight
  * Easy to customize to your needs 
-
-## Welcome to join in and feel free to contribute.
 
 ## USAGE  
 ```python3 secret-detection.py --rule /path/to/pattern.json --path /path/to/scan```  
