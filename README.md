@@ -1,8 +1,21 @@
 # secret-detection
-Finding your secret(Credential, API Key, AWS Key, Token, etc.)  in your source code, files
+secret-detection is a static code analysis tool designed for parsing various common data formats in search of hardcoded credentials and sensitive information. secret-detection can run in the CLI or you can integrate it in your CI/CD pipeline.
+
+## Feature
+* Using regex rules to scan, and help identify the following types of secrets:
+    * API Keys
+    * AWS Keys
+    * OAuth Client Secrets
+    * SSH Private Keys
+    * ...
+ * Supports a whitelisted
+ * Supports custom rules
+ * Lightweight
+ * Easy to customize to your needs 
+
 ## Welcome to join in and feel free to contribute.
 
-## USAGE:  
+## USAGE  
 ```python3 secret-detection.py --rule /path/to/pattern.json --path /path/to/scan```  
 ```Ex: python3 secret-detection.py --rule pattern.json --path test/```  
 
