@@ -51,7 +51,8 @@ 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
 1. Json Ouput  
 2. Entropy  
 3. Integrate to Git 
-4. ...
+4. Integrate with BurpSuite/ZAP/Jenkins/SonarQube
+5. ...
 
 ## License
 ### This project is licensed under the terms of the MIT license.
