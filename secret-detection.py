@@ -15,7 +15,7 @@ def help():
 def detect(line):
 	for (k,v) in rule.items():
 		# print(k,v)
-		result = re.findall(v, line)
+		result = re.findall(v, line, re.IGNORECASE)
 		if(len(result) > 0):
 			# print(k,v)
 			# print(len(result))
