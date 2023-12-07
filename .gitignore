@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+config.py
+.config
+Pipfile.lock

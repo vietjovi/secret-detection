@@ -39,5 +39,7 @@
     "Google Drive URL": "https://drive.google.com/\\S+",
     "Google Spreadsheets URL": "https://docs.google.com/spreadsheets/\\S+",
     "Google Document URL": "https://docs.google.com/document/\\S+",
-    "Google Slide URL": "https://docs.google.com/presentation/\\S+"
+    "Google Slide URL": "https://docs.google.com/presentation/\\S+",
+    "Docker Hub Access Token - PAT": "dckr_pat_\\S+",
+    "Generic Token": "TOKEN=\\S+"
 }

@@ -1,5 +1,9 @@
 import sys, os, re, itertools, json, getopt
 
+#
+#Author: vietjovi@gmail.com
+#
+
 ignored = ['.git', 'node_modules', 'bower_components', '.sass-cache', '.png', '.ico', '.mov', '.jpeg', 'jpg', '.avi', '.gif', '.apk', '.exe', '.jar', '.dmg', '.pdf', '.ipa', '.svg']
 ruleFile = "./pattern.json"
 api_key_min_entropy_ratio = 0.5
