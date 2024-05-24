@@ -1,0 +1,1 @@
+python3 secret-detection.py --rule pattern.json --path test/
