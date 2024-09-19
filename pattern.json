@@ -44,5 +44,6 @@
     "Generic Token": "TOKEN=\\S+",
     "Gitlab Personal Token": "glpat-\\S+",
     "Github Personal Token": "ghp_\\S+",
-    "Gitlab Runner Token": "glrt-\\S+"
+    "Gitlab Runner Token": "glrt-\\S+",
+    "SonarQube Token": "squ_\\S+"
 }
